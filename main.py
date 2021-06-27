@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 
@@ -19,6 +19,16 @@ def index():
 @app.route('/second')
 def second():
   return "I'm on a separate route"
+
+
+
+# HTTP Methods
+@app.route('/requesthttp', methods=['GET', 'POST'])
+def requesthttp():
+  if request.method == 'POST':
+    return "Auth here"
+  else:
+    return "Ask for creds here"
 
 
 
