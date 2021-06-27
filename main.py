@@ -8,7 +8,7 @@ app = Flask(
   static_folder='static'
 )
 
-# Index page
+# Index page and Rendering Basic Templates
 @app.route('/')
 def index():
   return render_template('index.html')
@@ -29,6 +29,15 @@ def requesthttp():
     return "Auth here"
   else:
     return "Ask for creds here"
+
+
+
+# File Uploads
+@app.route('/upload', methods=['GET', 'POST'])
+def upload_file():
+  if request.method == 'POST':
+    file = request.files['filename']
+    file.save('uploads/upload.txt')
 
 
 
