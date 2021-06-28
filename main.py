@@ -41,6 +41,14 @@ def upload_file():
 
 
 
+# Reading Cookies 🍪
+@app.route('/readcookie')
+def readcookie():
+  cookie = request.cookies.get('cookie')
+  return cookie
+
+
+
 if __name__ == '__main__':
   # Run the Flask app
   app.run(
