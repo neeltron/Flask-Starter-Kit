@@ -32,10 +32,10 @@ def requesthttp():
 
 
 
-# File Uploads
+# File Uploads (needs an HTML Form)
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
-  if request.method == 'POST':
+  if request.method == 'GET':
     file = request.files['filename']
     file.save('uploads/upload.txt')
 
