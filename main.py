@@ -49,6 +49,15 @@ def readcookie():
 
 
 
+# Storing Cookies
+@app.route('/storecookie')
+def storecookie():
+  response = make_response(render_template(index.html))
+  response.set_cookie('cookie', 'whatever')
+  return response
+  
+
+
 if __name__ == '__main__':
   # Run the Flask app
   app.run(
