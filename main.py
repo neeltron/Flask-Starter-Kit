@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response
+from flask import Flask, render_template, request, make_response, redirect, url_for
 
 
 
@@ -56,6 +56,13 @@ def storecookie():
   response.set_cookie('cookie', 'whatever')
   return response
   
+
+
+# Redirects
+@app.route('/redirect')
+def redirec():
+  return redirect(url_for('index'))
+
 
 
 if __name__ == '__main__':
