@@ -11,7 +11,7 @@ git clone https://github.com/neeltron/Flask-Starter-Kit.git
 ```
 pip install Flask
 ```
-<br>
+
 Alternatively, you can run it on <a href = "https://replit.com/@neeltron/Flask-Starter-Kit">repl.it</a>.
 
 ## References
